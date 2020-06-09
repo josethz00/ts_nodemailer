@@ -1,0 +1,20 @@
+yarn add typescript -D
+yarn add express
+yarn add @types/express
+
+yarn tsc src/index.ts       //converte o codigo
+yarn tsc --init      //cria o arquovp de configuração
+
+descomentar o outdir e mudar para ./dist
+deleta o arquivo js
+yarn tsc
+yarn add nodemailer
+yarn add @types/nodemailer -D
+
+************************************************************************************************************
+                                        AUTOMATIZAR O PROCESSO
+************************************************************************************************************
+
+yarn add ts-node-dev -D
+yarn dev:server
+yarn create react-app frontend --template==typescript
