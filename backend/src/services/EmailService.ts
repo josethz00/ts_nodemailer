@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 
 interface IMailTo{
-    name: string;
-    email: string;
+    name: Array<string>;
+    email: Array<string>;
 }
 interface IMailFrom{
     service: string;
@@ -25,6 +25,11 @@ interface IEmailService{
 }
 
 class EmailService implements IEmailService{
+    
+    public separator(val:string) {
+        var str = ' ' + val;
+        return str;
+    }
 
     sendMail( { from, to , message } : IMessageDTO ){
         const sender = nodemailer.createTransport({
@@ -45,7 +50,7 @@ class EmailService implements IEmailService{
             if (error) {
               console.log(error);
             } else {
-                console.log(`E-mail enviado de ${from.emailSender}, para ${to.name}: ${message.subject}`);
+                console.log(`E-mail enviado de ${from.emailSender}, para ${to.name.map(this.separator)}, o assunto é: ${message.subject}`);
             }
         });
         
