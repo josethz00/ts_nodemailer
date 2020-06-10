@@ -3,7 +3,8 @@ import EmailService from '../services/EmailService';
 
 
 class UserController{
-
+  
+    
   async index(req: Request, res: Response) {
     return res.json();
   }
