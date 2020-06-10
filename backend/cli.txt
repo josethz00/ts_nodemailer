@@ -17,4 +17,4 @@ yarn add @types/nodemailer -D
 
 yarn add ts-node-dev -D
 yarn dev:server
-yarn create react-app frontend --template==typescript
+npx create-react-app frontend --template typescript
