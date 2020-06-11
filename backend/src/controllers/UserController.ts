@@ -6,7 +6,10 @@ class UserController{
   
     
   async index(req: Request, res: Response) {
-    return res.json();
+    return res.json([{name:'Your name', email: 'youremail@domain.com' },
+    {name:'Your name', email: 'myemail@domain.com' },
+    {name:'Your name', email: 'ouremail@domain.com' },
+    {name:'Your name', email: 'theiremail@domain.com' }]);
   }
 
   async create(req: Request, res: Response) {
