@@ -72,13 +72,13 @@ function App() {
     <div className="App">
        {users.map(user => <User key={user.email} user={user} />) }
        <form onSubmit={handleSubmit}>
-           <input type="text" name="service" onChange={handleSectionChange} required/>
-           <input type="email" name="emailSender" onChange={handleSectionChange} required/>
-           <input type="password" name="pass" onChange={handleSectionChange} required/>
-           <input type="text" name="name" onChange={handleInputChange} required/>
-           <input type="email" name="email" onChange={handleInputChange} required/>
-           <input type="text" name="subject" onChange={handleInputChange} required/>
-           <input type="text" name="body"  onChange={handleInputChange} required/>
+           <input type="text" name="service" placeholder="Provedor de email" onChange={handleSectionChange} required/>
+           <input type="email" name="emailSender" placeholder="Endereço remetente" onChange={handleSectionChange} required/>
+           <input type="password" name="pass" placeholder="password" onChange={handleSectionChange} required/>
+           <input type="text" name="name" placeholder="Nome" onChange={handleInputChange} required/>
+           <input type="email" name="email" placeholder="Endereço destinatário" onChange={handleInputChange} required/>
+           <input type="text" name="subject" placeholder="Assunto" onChange={handleInputChange} required/>
+           <input type="text" name="body" placeholder="Mensagem" onChange={handleInputChange} required/>
            <br/>
            <button type="submit">Enviar e-mail</button>
        </form>
